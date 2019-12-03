@@ -1,0 +1,50 @@
+<!-- TabHost를 쓰기 위해 지켜줘야 할 약간의 규칙들
+     1. <TabHost ... 에 id 옵션 ~ @android:id/tabhost
+     2. <TabWidget ... 에 id 옵션 ~ @android:id/tabs
+     3. <FrameLayout ... 에 id 옵션 ~ @android:id/tabcontent-->
+
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- TabWidget , TabContent들(FrameLayout을 이용함)-->
+        <!-- TabWidget은 레이아웃들을 선택할 탭들이 위치하는 곳-->
+        <TabWidget
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@android:id/tabs"></TabWidget>
+
+        <!-- 그 아래 공간에는 FrameLayout을 사용하여 레이아웃들 겹쳐서 배치 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/tabcontent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF0000"
+                android:orientation="vertical"
+                android:id="@+id/tab1"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FF00"
+                android:orientation="vertical"
+                android:id="@+id/tab2"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0000FF"
+                android:orientation="vertical"
+                android:id="@+id/tab3"></LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

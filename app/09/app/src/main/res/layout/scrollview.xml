@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFFFCC">
+
+    <HorizontalScrollView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center">
+
+        <!-- 이 사이에 스크롤링이 필요한 것을 넣어줍시다
+        그러나 여기에는 한 개의 위젯만 넣을 수 있음...-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_gravity="right"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+</LinearLayout>

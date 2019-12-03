@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/setBlack"
+        android:title="검정배경화면">
+    </item>
+    <item
+        android:id="@+id/setYourColor"
+        android:title="나만의배경색상">
+    </item>
+    <item
+        android:title="하위메뉴도가능함">
+        <menu>
+            <item
+                android:id="@+id/changeTV"
+                android:title="텍스트뷰 바꾸기">
+            </item>
+            <item
+                android:id="@+id/changeBTN"
+                android:title="버튼 바꾸기">
+            </item>
+        </menu>
+    </item>
+</menu>

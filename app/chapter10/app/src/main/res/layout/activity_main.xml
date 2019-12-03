@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/munje"/>
+
+    <GridLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:rowCount="2"
+        android:columnCount="3">
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="① ㄱ - ㄴ - ㄷ"/>
+        <Button
+            android:id="@+id/btn2"
+            android:text="① ㄴ - ㄱ - ㄷ"/>
+        <Button
+            android:id="@+id/btn3"
+            android:text="① ㄱ - ㄷ - ㄴ"/>
+        <Button
+            android:id="@+id/btn4"
+            android:text="① ㄴ - ㄷ - ㄱ"/>
+        <Button
+            android:id="@+id/btn5"
+            android:text="① ㄷ - ㄴ - ㄱ"/>
+    </GridLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="결과 보기"
+        android:id="@+id/goToResultActivityBtn"/>
+
+</LinearLayout>

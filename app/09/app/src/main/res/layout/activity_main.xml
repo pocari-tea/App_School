@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Chronometer
+        android:id="@+id/counting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format="Counting... %s"
+        android:gravity="center"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="예약 시작" />
+
+    <CheckBox
+        android:id="@+id/calBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 설정 (캘린더뷰)"
+        android:visibility="invisible"/>
+
+    <CheckBox
+        android:id="@+id/timeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시간 설정"
+        android:visibility="invisible"/>
+
+    <!-- FrameLayout을 사용하여 위젯을 겹쳐 배치할 수 있음 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- TimePicker와 DatePicker에
+        layout_gravity="center" 옵션을 주어
+        레이아웃 범위 내에서 가운데 배치되도록 함 -->
+        <TimePicker
+            android:id="@+id/timeP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:timePickerMode="spinner"
+            android:visibility="invisible"></TimePicker>
+
+        <DatePicker
+            android:id="@+id/dateP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:datePickerMode="spinner"
+            android:visibility="invisible"></DatePicker>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#999999"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예약 완료"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

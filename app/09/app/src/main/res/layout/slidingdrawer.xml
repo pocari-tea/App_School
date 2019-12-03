@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="FFFFDD">
+
+    <!-- 슬라이딩 드로어는 손잡이를 눌러서 숨어있는 위젯을 까꿍!하는 뷰 컨테이너 한 형태입니다-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="슬라이딩 도어 밖에도 위젯 가능"
+        android:textSize="20dp"
+        android:gravity="center"/>
+
+    <!-- SlidingDrawer 사용 규칙 두가지
+        1. handle 손잡이 (ㄷ 한자 27번)
+        2. content 서랍 내용물 -> (아이디 연결이 필요함) -->
+
+    <SlidingDrawer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:handle="@id/btn"
+        android:content="@id/btn"
+        android:background="#">
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:id="@+id/btn"/>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <Chronometer
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+
+            <AnalogClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </SlidingDrawer>
+
+</LinearLayout>

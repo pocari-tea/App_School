@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 제공해드린 기본 틀에 대한 설명 -->
+<!--
+    LinearLayout에 baseLayout이라는 id를 부여
+    TextView와 Button에 각각 textView, button이라는 id 부여
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/baseLayout"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:text="오른쪽 상단 위 메뉴버튼 (...)을 누르세요"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/button"
+        android:text="이것은 버튼입니다."/>
+
+</LinearLayout>
